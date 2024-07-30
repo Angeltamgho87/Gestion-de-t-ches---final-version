@@ -4,7 +4,7 @@ Un gestionnaire de tâches simple et élégant développé en HTML, CSS et JavaS
 
 ## Aperçu de l'application
 
-![Aperçu du Gestionnaire de Tâches](apercu_gestionnaire_taches.png)
+![Aperçu du Gestionnaire de Tâches](Capture.png)
 
 ## Fonctionnalités
 
@@ -38,7 +38,6 @@ Aucune dépendance externe n'est requise pour exécuter cette application.
 ## Fonctionnalités principales
 
 ### Ajout de tâches
-<<<<<<< HEAD
 
 Utilisez le formulaire en haut de la page pour ajouter une nouvelle tâche. Remplissez le titre, sélectionnez la priorité et le statut, puis cliquez sur "Ajouter la tâche".
 
@@ -52,17 +51,6 @@ Cliquez sur le bouton "Supprimer" à côté d'une tâche pour la retirer de la l
 
 ### Exportation en CSV
 
-=======
-Utilisez le formulaire en haut de la page pour ajouter une nouvelle tâche. Remplissez le titre, sélectionnez la priorité et le statut, puis cliquez sur "Ajouter la tâche".
-
-### Édition de tâches
-Cliquez sur le bouton "Éditer" à côté d'une tâche pour modifier ses détails. Les champs du formulaire seront pré-remplis avec les informations actuelles de la tâche.
-
-### Suppression de tâches
-Cliquez sur le bouton "Supprimer" à côté d'une tâche pour la retirer de la liste.
-
-### Exportation en CSV
->>>>>>> 386828d46f630a99eac95ba6c8cf9ef3bc97c6ae
 Cliquez sur le bouton "Exporter en CSV" en bas de la page pour télécharger un fichier CSV contenant toutes les tâches actuelles.
 
 ## Personnalisation
