@@ -1,13 +1,15 @@
 <html>
   <head><base href=""></base>
   <title>Gestionnaire de Tâches Animé</title>
-  <!-- source de style -->
+  <!-- source fichier de style -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
+    <!-- Titre de l'application -->
     <h1>Gestionnaire de Tâches</h1>
+    <!-- Formulaire pour entrer les données de la tâches -->
     <form id="taskForm">
       <div class="loading-circle" id="loadingCircle"></div>
       <input type="text" id="taskTitle" placeholder="Titre de la tâche" required>
@@ -24,6 +26,7 @@
       </select>
       <button type="submit" id="submitBtn">Ajouter la tâche</button>
     </form>
+    <!-- utilisation de la balise table contrairement à la balise ul pour améliorer la présentation de la liste de la tâche-->
     <table id="taskList">
       <thead>
         <tr>
@@ -40,7 +43,7 @@
     <button id="exportBtn">Exporter en CSV</button>
   </div>
 
-<!-- lien source de javascript -->
+<!-- lien source fichier de javascript -->
 <script src="script.js"></script>
 </body>
 <footer>

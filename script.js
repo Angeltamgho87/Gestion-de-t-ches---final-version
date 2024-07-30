@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Tableau pour stocker les tâches
   let tasks = [];
   let editingTaskId = null;
+  //variable d'animation du cercle de chargement des données dans la balise tbody
   let rotationAngle = 0;
   let animationId = null;
 
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Simuler un délai de chargement du contenu du tableau avec une animation - cercle rotant
     showLoading();
 
+    // attendre 1 seconde en simulant une animation de chargement avec cercle tournant
     setTimeout(() => {
       tasks.forEach((task, index) => {
         let date = new Date(task.id);
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <td class="date">${readableDate}</td>
             `;
       });
-
+      //cacher le cercle de chargement  après le chargement des données dans la balise tbody
       hideLoading();
     }, 1000);
   }
@@ -100,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadingCircle.classList.remove("show");
   }
 
-  // Fonction pour éditer une tâche (accessible globalement)
+  // Fonction pour éditer une tâche (accessible globalement - utilisation de window)
   window.editTask = function (id) {
     const task = tasks.find((task) => task.id === id);
     document.getElementById("taskTitle").value = task.title;
@@ -110,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     submitBtn.textContent = "Mettre à jour la tâche";
   };
 
-  // Fonction pour supprimer une tâche (accessible globalement)
+  // Fonction pour supprimer une tâche (accessible globalement - utilisation de window)
   window.deleteTask = function (id) {
     tasks = tasks.filter((task) => task.id !== id);
     renderTasks();
@@ -118,8 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Gestionnaire d'événement pour l'exportation en CSV
   exportBtn.addEventListener("click", function () {
+    //definir le contenu du fichier csv
+    const mineType = "text/csv";
     const csvContent =
-      "data:text/csv;charset=utf-8," +
+      "data:" +
+      mineType +
+      ";charset=utf-8," +
       "Titre,Priorité,Statut,Date\n" +
       tasks
         .map((task) => {
@@ -130,12 +136,12 @@ document.addEventListener("DOMContentLoaded", function () {
           return `${task.title},${task.priority},${task.status},${formattedDate}`;
         })
         .join("\n");
-
+    //encoder le contenu du fichier csv pour le lien
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
+    link.href = encodedUri;
     link.setAttribute("download", "taches.csv");
-
+    //simuler l'action de clique pour provoquer le téléchargement
     link.click();
   });
 
