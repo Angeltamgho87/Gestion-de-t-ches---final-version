@@ -1,0 +1,52 @@
+<html>
+  <head><base href=""></base>
+  <title>Gestionnaire de Tâches Animé</title>
+  <!-- source de style -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Gestionnaire de Tâches</h1>
+    <form id="taskForm">
+      <div class="loading-circle" id="loadingCircle"></div>
+      <input type="text" id="taskTitle" placeholder="Titre de la tâche" required>
+      <select id="taskPriority" required>
+        <option value="">Priorité</option>
+        <option value="basse">Basse</option>
+        <option value="moyenne">Moyenne</option>
+        <option value="haute">Haute</option>
+      </select>
+      <select id="taskStatus" required>
+        <option value="">Statut</option>
+        <option value="en attente">En attente</option>
+        <option value="complétée">Complétée</option>
+      </select>
+      <button type="submit" id="submitBtn">Ajouter la tâche</button>
+    </form>
+    <table id="taskList">
+      <thead>
+        <tr>
+          <th>Titre</th>
+          <th>Priorité</th>
+          <th>Statut</th>
+          <th>Actions</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <button id="exportBtn">Exporter en CSV</button>
+  </div>
+
+<!-- lien source de javascript -->
+<script src="script.js"></script>
+</body>
+<footer>
+  <p>
+    © Gestionnaire de tâches v1 - Tous droits réservés (2024)
+    Créé par Michel Ange Tamgho Fogue (Projet Académique)
+  </p>
+</footer>
+</html>

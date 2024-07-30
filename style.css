@@ -1,0 +1,217 @@
+/* Animation du fond d'écran en dégradé */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    /* Fond d'écran animé avec un dégradé de couleurs */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    /* Transition douce pour les effets de survol */
+}
+
+/* Effet de survol sur le conteneur principal */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    background-color: #f0f0f0;
+}
+
+/* Style de focus pour les champs de saisie */
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4CAF50;
+}
+
+select {
+    background-color: #f0f0f0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol sur les boutons */
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px;
+    background-color: #fff;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr {
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol sur les lignes du tableau */
+tr:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-actions button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+}
+
+.edit-btn:hover {
+    background-color: #1976D2;
+}
+
+#exportBtn {
+    margin-top: 20px;
+    background-color: #FF9800;
+    width: 100%;
+}
+
+#exportBtn:hover {
+    background-color: #F57C00;
+}
+
+/* Animation d'apparition des nouvelles tâches */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.new-task {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Style du cercle de chargement */
+.loading-circle {
+    display: none;
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* afficher le cercle de chargement */
+.loading-circle.show {
+    display: block;
+}
+
+footer {
+    max-width: 800px;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol sur le pied de page */
+footer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
